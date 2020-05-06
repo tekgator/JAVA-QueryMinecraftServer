@@ -20,7 +20,35 @@ utilize the [UT3 (or GameSpot) Query Protocol](https://wiki.vg/Query)
 
 ## Installing
 
-This section is still a TODO. For right now you can download the JAR in the [release](https://github.com/tekgator/JAVA-QueryMinecraftServer/releases) section. 
+For right now you can download the JAR in the [release](https://github.com/tekgator/JAVA-QueryMinecraftServer/releases) section or include the dependency into your project via [Jitpack.io](https://jitpack.io/#tekgator/JAVA-QueryMinecraftServer):
+
+##### Maven
+```xml
+<dependency>
+  <groupId>com.github.tekgator</groupId>
+	<artifactId>JAVA-QueryMinecraftServer</artifactId>
+	<version>1.1</version>
+</dependency>
+```
+```xml
+<repositories>
+  <repository>
+	  <id>jitpack.io</id>
+		<url>https://jitpack.io</url>
+	</repository>
+</repositories>
+```
+
+##### Gradle
+```gradle
+dependencies {
+    implementation 'com.github.tekgator:JAVA-QueryMinecraftServer:1.1'
+}
+
+repositories {
+    maven { url 'https://jitpack.io' }
+}
+```
 
 ## How to use it
 
