@@ -31,13 +31,18 @@ public class Status {
         return description;
     }
 
-    public String getFavicon() {
+    public String getFavIcon() {
+        return favicon;
+    }
+
+    public String getFavIconStripped() {
         try {
             return favicon.replace("data:image/png;base64,", "");
         } catch(Exception ex) {
             return null;
         }
     }
+
 
     public Mods getMods() {
         return modinfo;
