@@ -42,21 +42,9 @@ public class ServerDNS {
     private void resolve(String hostName, int port)
             throws QueryException {
 
-        // check whether the port is encoded within the hostname string
-        String[] parts = hostName.split(":");
-
-        if (parts.length > 1) {
-            this.targetHostName = parts[0];
-            try {
-                this.port = Integer.parseInt(parts[1]);
-            } catch (NumberFormatException e) {
-                this.port = port;
-            }
-        } else {
-            this.targetHostName = hostName;
-            this.port = port;
-        }
+        this.targetHostName = hostName;
         this.hostName = this.targetHostName;
+        this.port = port;
 
         if (!Pattern.compile(IP4_PATTERN).matcher(this.targetHostName).matches() &&
                 this.port == 0) {
