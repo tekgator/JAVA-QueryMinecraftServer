@@ -26,16 +26,16 @@ For right now you can download the JAR in the [release](https://github.com/tekga
 ```xml
 <dependency>
   <groupId>com.github.tekgator</groupId>
-	<artifactId>JAVA-QueryMinecraftServer</artifactId>
-	<version>1.1</version>
+  <artifactId>JAVA-QueryMinecraftServer</artifactId>
+  <version>1.1</version>
 </dependency>
 ```
 ```xml
 <repositories>
   <repository>
-	  <id>jitpack.io</id>
-		<url>https://jitpack.io</url>
-	</repository>
+    <id>jitpack.io</id>
+    <url>https://jitpack.io</url>
+  </repository>
 </repositories>
 ```
 
