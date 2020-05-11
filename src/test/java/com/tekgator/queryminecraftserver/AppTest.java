@@ -2,7 +2,6 @@ package com.tekgator.queryminecraftserver;
 
 import static org.junit.Assert.assertTrue;
 
-import com.tekgator.queryminecraftserver.api.Protocol;
 import com.tekgator.queryminecraftserver.api.QueryStatus;
 
 import org.junit.Ignore;
@@ -17,7 +16,7 @@ public class AppTest {
         try {
             System.out.println("-------------------------------------------------------------");
             System.out.println(new QueryStatus.Builder("play.lemoncloud.net")
-                                        .setProtocol(Protocol.TCP)
+                                        .setProtocolTcp()
                                         .build()
                                         .getStatus()
                                         .toJson());
@@ -36,7 +35,7 @@ public class AppTest {
         
         try {
             queryStatus = new QueryStatus.Builder("play.lemoncloud.net")
-                                .setProtocol(Protocol.TCP)
+                                .setProtocolTcp()
                                 .build();
             
             for (int i = 1; i <= mMultiCnt; i++) {
@@ -60,7 +59,7 @@ public class AppTest {
         try {
             System.out.println("-------------------------------------------------------------");
             System.out.println(new QueryStatus.Builder("69.175.124.74")
-                                        .setProtocol(Protocol.TCP_DEPRECIATED) // Currently MegaCraft (69.175.124.74) still on 1.5.1
+                                        .setProtocolTcpDepreciated() // Currently MegaCraft (69.175.124.74) still on 1.5.1
                                         .build()
                                         .refreshStatus()
                                         .toJson());
@@ -80,7 +79,7 @@ public class AppTest {
         
         try {
             queryStatus = new QueryStatus.Builder("69.175.124.74") 
-                                .setProtocol(Protocol.TCP_DEPRECIATED) // Currently MegaCraft (69.175.124.74) still on 1.5.1
+                                .setProtocolTcpDepreciated() // Currently MegaCraft (69.175.124.74) still on 1.5.1
                                 .build();
 
             for (int i = 1; i <= mMultiCnt; i++) {
@@ -104,7 +103,7 @@ public class AppTest {
         try {
             System.out.println("-------------------------------------------------------------");
             System.out.println(new QueryStatus.Builder("play.lemoncloud.net")
-                                        .setProtocol(Protocol.UDP_BASIC)
+                                        .setProtocolUdpBasic()
                                         .build()
                                         .refreshStatus()
                                         .toJson());
@@ -124,7 +123,7 @@ public class AppTest {
         
         try {
             queryStatus = new QueryStatus.Builder("play.lemoncloud.net")
-                                .setProtocol(Protocol.UDP_BASIC)
+                                .setProtocolUdpBasic()
                                 .build();
 
             for (int i = 1; i <= mMultiCnt; i++) {
@@ -148,7 +147,7 @@ public class AppTest {
         try {
             System.out.println("-------------------------------------------------------------");
             System.out.println(new QueryStatus.Builder("play.lemoncloud.net")
-                                        .setProtocol(Protocol.UDP_FULL)
+                                        .setProtocolUdpFull()
                                         .build()
                                         .refreshStatus()
                                         .toJson());
@@ -168,7 +167,7 @@ public class AppTest {
         
         try {
             queryStatus = new QueryStatus.Builder("play.lemoncloud.net")
-                                .setProtocol(Protocol.UDP_FULL)
+                                .setProtocolUdpFull()
                                 .build();
             for (int i = 1; i <= mMultiCnt; i++) {
                 System.out.println(Integer.toString(i) + ".)-------------------------------------------------------------");
