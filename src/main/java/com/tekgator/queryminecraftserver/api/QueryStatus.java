@@ -101,6 +101,8 @@ public final class QueryStatus {
         }
 
         /**
+         * Set protocol to be used for the Query
+         * 
          * @param The used Minecraft Protocol version for invoking the query
          * @see Protocol
          */
@@ -108,6 +110,48 @@ public final class QueryStatus {
             this.protocol = protocol;
             return this;
         }
+
+        /**
+         * Use Minecraft Protocol TCP (Minecraft >= v1.7) for 
+         * Query (method can be used instead setProtocol to 
+         * drop dependency of Protocol enum
+         */
+        public Builder setProtocolTcp() {
+            this.protocol = Protocol.TCP;
+            return this;
+        }
+
+
+        /**
+         * Use Minecraft Protocol TCP depreciated (Minecraft <= v1.6)
+         * for Query (method can be used instead setProtocol to 
+         * drop dependency of Protocol enum
+         */
+        public Builder setProtocolTcpDepreciated() {
+            this.protocol = Protocol.TCP_DEPRECIATED;
+            return this;
+        }
+
+
+        /**
+         * Use Minecraft Protocol UDP basic for Query (method can be 
+         * used instead setProtocol to drop dependency of Protocol enum
+         */
+        public Builder setProtocolUdpBasic() {
+            this.protocol = Protocol.UDP_BASIC;
+            return this;
+        }
+
+
+        /**
+         * Use Minecraft Protocol UDP full for Query (method can be 
+         * used instead setProtocol to drop dependency of Protocol enum
+         */
+        public Builder setProtocolUdpFull() {
+            this.protocol = Protocol.UDP_FULL;
+            return this;
+        }        
+
 
         /**
          * Set socket timeout
